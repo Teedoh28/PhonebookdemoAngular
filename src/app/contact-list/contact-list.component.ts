@@ -31,7 +31,6 @@ export class ContactListComponent implements OnInit {
   });
 
   ngOnInit() {
-    //this.contact = new Contact();
     this.isupdated = false;
     this.dtOptions = {
       pageLength: 6,
@@ -40,16 +39,6 @@ export class ContactListComponent implements OnInit {
       processing: true
     };
     this.contactService.getContactList().subscribe(data => {
-      debugger;
-
-
-      debugger;
-     /* data.forEach( element => {
-        this.contact.entry_contactNo = element[2];
-        this.contact.entry_name = element[4];
-        this.contact.entry_email = element[3];
-        this.contact.entry_address = element[1];
-      });*/
       this.contacts = data;
       this.dtTrigger.next();
     });
@@ -83,7 +72,6 @@ export class ContactListComponent implements OnInit {
     this.contact.entry_name = this.ContactName.value;
     this.contact.entry_email = this.ContactEmail.value;
     this.contact.entry_address = this.ContactAddress.value;
-    debugger;
     console.log(this.ContactAddress.value);
 
     this.contactService.updateContact(this.contact.entry_contactNo, this.contact).subscribe(
