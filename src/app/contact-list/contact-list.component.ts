@@ -67,7 +67,6 @@ export class ContactListComponent implements OnInit {
   }
 
   updateContact(entry_id: String) {
-    debugger;
     this.contactService.getContact(entry_id)
       .subscribe(
         data => {
