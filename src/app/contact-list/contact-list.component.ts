@@ -24,10 +24,10 @@ export class ContactListComponent implements OnInit {
 
   contactupdateform = new FormGroup({
     phonebookEntry_id: new FormControl(),
-    contact_name: new FormControl(),
-    contact_email: new FormControl(),
-    contact_address: new FormControl(),
-    contact_msisdn: new FormControl()
+    entry_name: new FormControl(),
+    entry_email: new FormControl(),
+    entry_address: new FormControl(),
+    entry_contactNo: new FormControl()
   });
 
   ngOnInit() {
